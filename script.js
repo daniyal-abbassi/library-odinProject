@@ -24,8 +24,27 @@ const createAndSave = (name,author) => {
     //add to array
     booksArray.push(newBook);
 }
-
+createAndSave('animal farm','gorge orowell')
+createAndSave('1984','george orwell')
+createAndSave('the great gatsby','f scott fitzgerald')
+createAndSave('the catcher in the rye','j d salinger')
+createAndSave('the lord of the rings','j r r tolkien')
 // booksArray.map(book=>console.log(book.name,book.author,book.id))
 //buttons to add and delete and edit read status for books
-
+console.log(bookList)
 //loop throght books and render them on page
+booksArray.forEach((book)=>{
+    //get the book details
+    let bookName = book.name;
+    let bookAuthor = book.author;
+    let bookId = book.id;
+    //create a container 
+    let bookDiv = document.createElement('div');
+    //fill the container with data
+    bookDiv.innerHTML += `
+    <span class="bookName" data-book-id="${bookId}">name: ${bookName}</span>
+    <span class="bookAuthor">author: ${bookAuthor}</span>
+    `;
+    bookList.appendChild(bookDiv)
+})
+//TEST
