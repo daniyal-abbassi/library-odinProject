@@ -13,6 +13,29 @@
         <dvi id="books">
             
         </dvi>
+        <!-- dialog and form for adding book -->
+         <dialog id="dialog">
+            <form method="dialog"">
+            <h4>Add a Book</h4>
+            <p>
+                <label>
+                    Name: 
+                    <input type="text" name="bookName" required>
+                </label>
+            </p>
+            <p>
+                <label>
+                    Author: 
+                    <input type="text" name="bookAuthor" required>
+                </label>
+            </p>
+            <input type="submit" value="Add Book">
+            <input type="submit" value="Cancel">
+            </form>
+         </dialog>
+         <p>
+            <button id="add-book">Add Book</button>
+         </p>
     </div>
 
 
