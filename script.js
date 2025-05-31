@@ -42,8 +42,8 @@ booksArray.forEach((book)=>{
     let bookDiv = document.createElement('div');
     //fill the container with data
     bookDiv.innerHTML += `
-    <span class="bookName" data-book-id="${bookId}">name: ${bookName}</span>
-    <span class="bookAuthor">author: ${bookAuthor}</span>
+    <p  class="bookName" data-book-id="${bookId}">name: <span>${bookName}</span></p>
+    <p class="bookAuthor">author: <span>${bookAuthor}</span></p>
     `;
     //add to books list
     bookList.appendChild(bookDiv)
