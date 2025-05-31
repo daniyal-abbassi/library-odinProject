@@ -49,3 +49,14 @@ booksArray.forEach((book) => {
 })
 
 //buttons to add and delete and edit read status for books
+//get the dialog elements
+const openDialogBtn = document.getElementById('add-book');
+const cancelBtn = document.getElementById('cancel-btn');
+const addBookBtn = document.getElementById('add-btn');
+const inputBookName = document.getElementById('book-name').value;
+const inputBookAuthor = document.getElementById('book-author').value;
+//add eventListener for open dialog
+
+//add eventListener for submitting dialog
+
+//add eventListener for cancelling dialog
