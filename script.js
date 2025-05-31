@@ -5,35 +5,34 @@ const bookList = document.getElementById('books');
 let booksArray = [];
 
 //Book Object Constructore
-function Book(name,author,id) {
+function Book(name, author, id) {
     this.name = name;
     this.author = author;
     this.id = id;
 }
-Book.prototype.sayBook = function() {
-   console.log(`book name: ${this.name}, and author is: ${this.author}`)
+Book.prototype.sayBook = function () {
+    console.log(`book name: ${this.name}, and author is: ${this.author}`)
 }
 
 
 //add a function for creating and storing books to array with specific id
-const createAndSave = (name,author) => {
+const createAndSave = (name, author) => {
     //random new id
     let newId = crypto.randomUUID();
     //create with Object constructor
-    let newBook = new Book(name,author,newId);
+    let newBook = new Book(name, author, newId);
     //add to array
     booksArray.push(newBook);
 }
-createAndSave('animal farm','gorge orowell')
-createAndSave('1984','george orwell')
-createAndSave('the great gatsby','f scott fitzgerald')
-createAndSave('the catcher in the rye','j d salinger')
-createAndSave('the lord of the rings','j r r tolkien')
+createAndSave('animal farm', 'gorge orowell')
+createAndSave('1984', 'george orwell')
+createAndSave('the great gatsby', 'f scott fitzgerald')
+createAndSave('the catcher in the rye', 'j d salinger')
+createAndSave('the lord of the rings', 'j r r tolkien')
 
-//buttons to add and delete and edit read status for books
 
 //loop throght books and render them on page
-booksArray.forEach((book)=>{
+booksArray.forEach((book) => {
     //get the book details
     let bookName = book.name;
     let bookAuthor = book.author;
@@ -48,3 +47,5 @@ booksArray.forEach((book)=>{
     //add to books list
     bookList.appendChild(bookDiv)
 })
+
+//buttons to add and delete and edit read status for books
