@@ -5,3 +5,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+#wrapper {
+    margin-top: 5vh;
+    margin-left: 5vw;
+    border: 1px solid black;
+}
+#books {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: nowrap;
+    padding: 10px;
+}
+.bookName,.bookAuthor {
+    color: red;
+    font-weight: bold;
+}
